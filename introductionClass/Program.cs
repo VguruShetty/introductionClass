@@ -1,8 +1,76 @@
-﻿
-class Program
+﻿#region struct
+//public struct student
+//{
+//    public int _id;
+//    public string _name;
+
+//    public string Name
+//    {
+//        get { return _name; }
+//        set { _name = value; }
+//    }
+//    public int Id
+//    {
+//        get { return _id;}
+//        set { _id = value;}
+//    }
+//    public student(int  Id, string Name)
+//    {
+//        this._id = Id;
+//        this._name = Name;
+//    }
+//    public void PrintDetails()
+//    {
+//        Console.WriteLine("id - {0} && Name - {1}", this._id, this._name);
+//    }
+//    //~student()
+//    //{
+//    //    //Struct cant have destructor
+//    //}
+//}
+//class Program
+//{
+//     static void Main()
+//    {
+//        //student s1 = new student(101, "Vguru");//here we initailize in parameter
+//        //s1.PrintDetails();
+
+//        //student s2 = new student();//here we didnot initailize the we get 0 and blank null value
+//        //s2.Id = 20;/// here we initailize in properties
+//        //s2.Name = "Raksha";
+//        //s2.PrintDetails();
+
+//        //student s3 = new student
+//        //{
+//        //    Id = 33,
+//        //    Name = "Sushmitha"
+//        //};
+//        //s3.PrintDetails();
+//    }
+//}
+#endregion
+
+#region Interface
+interface Student
 {
-     static void Main()
+    
+    void print()
     {
-        Console.WriteLine("Hello world");
+
     }
 }
+class Program : Student
+{
+    public void print()
+    {
+        Console.WriteLine("hello");
+    }
+    static void Main()
+    {
+        Student s = new Program();
+        s.print();
+
+        
+    }
+}
+#endregion
