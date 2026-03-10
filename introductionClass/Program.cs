@@ -78,13 +78,13 @@
 #region Exception
 class Program
 {
-    public void print()
+    public static void print()
     {
         Console.WriteLine("hello");
     }
     static void Main()
     {
-        
+        print();
     }
 }
 #endregion
