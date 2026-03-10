@@ -51,15 +51,32 @@
 #endregion
 
 #region Interface
-interface Student
-{
-    
-    void print()
-    {
+//interface Student
+//{
 
-    }
-}
-class Program : Student
+//    void print()
+//    {
+
+//    }
+//}
+//class Program : Student
+//{
+//    public void print()
+//    {
+//        Console.WriteLine("hello");
+//    }
+//    static void Main()
+//    {
+//        Student s = new Program();
+//        s.print();
+
+
+//    }
+//}
+#endregion
+
+#region Exception
+class Program
 {
     public void print()
     {
@@ -67,9 +84,6 @@ class Program : Student
     }
     static void Main()
     {
-        Student s = new Program();
-        s.print();
-
         
     }
 }
