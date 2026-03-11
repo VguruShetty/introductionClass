@@ -84,7 +84,22 @@ class Program
     }
     static void Main()
     {
-        print();
+        try
+        {
+            StreamReader sr = new StreamReader(@"C:\Users\Hp\source\repos\introductionClass\Text.txt");
+            Console.WriteLine(sr.ReadToEnd());
+            sr.Close();
+        }
+        catch(FileNotFoundException ex)
+        {
+            Console.WriteLine(ex.Message);
+            Console.WriteLine(ex.StackTrace);
+        }
+        catch(Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+            Console.WriteLine(ex.StackTrace);
+        }
     }
 }
 #endregion
