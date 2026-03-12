@@ -76,6 +76,35 @@
 #endregion
 
 #region Exception
+//class Program
+//{
+//    public static void print()
+//    {
+//        Console.WriteLine("hello");
+//    }
+//    static void Main()
+//    {
+//        try
+//        {
+//            StreamReader sr = new StreamReader(@"C:\Users\Hp\source\repos\introductionClass\Text.txt");
+//            Console.WriteLine(sr.ReadToEnd());
+//            sr.Close();
+//        }
+//        catch(FileNotFoundException ex)
+//        {
+//            Console.WriteLine(ex.Message);
+//            Console.WriteLine(ex.StackTrace);
+//        }
+//        catch(Exception ex)
+//        {
+//            Console.WriteLine(ex.Message);
+//            Console.WriteLine(ex.StackTrace);
+//        }
+//    }
+//}
+#endregion
+
+#region  Test1
 class Program
 {
     public static void print()
@@ -90,12 +119,12 @@ class Program
             Console.WriteLine(sr.ReadToEnd());
             sr.Close();
         }
-        catch(FileNotFoundException ex)
+        catch (FileNotFoundException ex)
         {
             Console.WriteLine(ex.Message);
             Console.WriteLine(ex.StackTrace);
         }
-        catch(Exception ex)
+        catch (Exception ex)
         {
             Console.WriteLine(ex.Message);
             Console.WriteLine(ex.StackTrace);
