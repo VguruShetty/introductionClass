@@ -110,6 +110,7 @@ class Program
     public static void print()
     {
         Console.WriteLine("hello");
+        Console.WriteLine("Hey");
     }
     static void Main()
     {
