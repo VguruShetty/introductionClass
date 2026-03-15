@@ -136,4 +136,23 @@
 
 #region Test2
 
+class Program
+{
+    public static void Main()
+    {
+        Add(1, 2,3, 4);
+    }
+    public static void Add(int f, int s, params object[] res)
+    {
+        int result = f + s;
+        if(res != null)
+        {
+            foreach(int i in res)
+            {
+                result += i;
+            }
+        }
+        Console.WriteLine(result);
+    } 
+}
 #endregion
