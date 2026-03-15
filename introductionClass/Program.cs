@@ -140,7 +140,9 @@ class Program
 {
     public static void Main()
     {
-        Add(1, 2,3, 4);
+        Add(1, 2);
+        Add(1, 2, 3, 4);
+        Add(1, 2, new object[] { 3, 4 });
     }
     public static void Add(int f, int s, params object[] res)
     {
