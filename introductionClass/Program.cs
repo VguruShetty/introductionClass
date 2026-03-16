@@ -136,25 +136,41 @@
 
 #region Option_Parameter
 
+//class Program
+//{
+//    public static void Main()
+//    {
+//        Add(1, 2);
+//        Add(1, 2, 3, 4);
+//        Add(1, 2, new object[] { 3, 4 });
+//    }
+//    public static void Add(int f, int s, params object[] res)
+//    {
+//        int result = f + s;
+//        if(res != null)
+//        {
+//            foreach(int i in res)
+//            {
+//                result += i;
+//            }
+//        }
+//        Console.WriteLine(result);
+//    } 
+//}
+#endregion
+
+#region dictionary
 class Program
 {
     public static void Main()
     {
-        Add(1, 2);
-        Add(1, 2, 3, 4);
-        Add(1, 2, new object[] { 3, 4 });
+        
     }
-    public static void Add(int f, int s, params object[] res)
+    public static void print()
     {
-        int result = f + s;
-        if(res != null)
-        {
-            foreach(int i in res)
-            {
-                result += i;
-            }
-        }
-        Console.WriteLine(result);
-    } 
+        Dictionary<string, string> dict = new Dictionary<string, string>();
+
+        Console.WriteLine();
+    }
 }
 #endregion
