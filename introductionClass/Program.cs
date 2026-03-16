@@ -174,9 +174,12 @@ class Program
         dict.Add(3, "e");
         dict.Add(4, "f");
         dict.Add(5, "g");
-        Console.WriteLine(dict.ToString());
-        Console.WriteLine(dict.Count);
-        foreach(int key in dict.Keys)
+        Console.WriteLine(dict.TryGetValue(1, out string str));
+        Console.WriteLine("Info " + dict.ToString());
+        Console.WriteLine("total count: " + dict.Count());
+        Console.WriteLine(dict.Remove(5));
+        Console.WriteLine("total count: " + dict.Count());
+        foreach (int key in dict.Keys)
         {
             Console.WriteLine(key);
             Console.WriteLine(dict[key]);
