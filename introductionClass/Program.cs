@@ -172,6 +172,10 @@ class Program
         dict.Add(1, "b");
         dict.Add(2, "d");
         dict.Add(3, "e");
+        dict.Add(4, "f");
+        dict.Add(5, "g");
+        Console.WriteLine(dict.ToString());
+        Console.WriteLine(dict.Count);
         foreach(int key in dict.Keys)
         {
             Console.WriteLine(key);
