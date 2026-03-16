@@ -164,13 +164,24 @@ class Program
 {
     public static void Main()
     {
-        
+        print();
     }
     public static void print()
     {
-        Dictionary<string, string> dict = new Dictionary<string, string>();
-
-        Console.WriteLine();
+        Dictionary<int, string> dict = new Dictionary<int, string>();
+        dict.Add(1, "b");
+        dict.Add(2, "d");
+        dict.Add(3, "e");
+        foreach(int key in dict.Keys)
+        {
+            Console.WriteLine(key);
+            Console.WriteLine(dict[key]);
+        }
+        foreach(string key in dict.Values)
+        {
+            Console.WriteLine(key);            
+        } 
+        
     }
 }
 #endregion
