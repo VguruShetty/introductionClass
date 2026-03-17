@@ -174,6 +174,7 @@ class Program
         dict.Add(3, "e");
         dict.Add(4, "f");
         dict.Add(5, "g");
+        dict.Add(6, "h");
         Console.WriteLine(dict.TryGetValue(1, out string str));
         Console.WriteLine("Info " + dict.ToString());
         Console.WriteLine("total count: " + dict.Count());
