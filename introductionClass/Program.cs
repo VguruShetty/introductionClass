@@ -160,6 +160,42 @@
 #endregion
 
 #region dictionary
+//class Program
+//{
+//    public static void Main()
+//    {
+//        print();
+//    }
+//    public static void print()
+//    {
+//        Dictionary<int, string> dict = new Dictionary<int, string>();
+//        dict.Add(1, "b");
+//        dict.Add(2, "d");
+//        dict.Add(3, "e");
+//        dict.Add(4, "f");
+//        dict.Add(5, "g");
+//        dict.Add(6, "h");
+//        Console.WriteLine(dict.TryGetValue(1, out string str));
+//        Console.WriteLine("Info " + dict.ToString());
+//        Console.WriteLine("total count: " + dict.Count());
+//        Console.WriteLine(dict.Remove(5));
+//        Console.WriteLine("total count: " + dict.Count());
+//        foreach (int key in dict.Keys)
+//        {
+//            Console.WriteLine(key);
+//            Console.WriteLine(dict[key]);
+//        }
+//        foreach(string key in dict.Values)
+//        {
+//            Console.WriteLine(key);            
+//        } 
+
+//    }
+//}
+#endregion
+
+#region List
+
 class Program
 {
     public static void Main()
@@ -185,11 +221,12 @@ class Program
             Console.WriteLine(key);
             Console.WriteLine(dict[key]);
         }
-        foreach(string key in dict.Values)
+        foreach (string key in dict.Values)
         {
-            Console.WriteLine(key);            
-        } 
-        
+            Console.WriteLine(key);
+        }
+
     }
 }
+
 #endregion
