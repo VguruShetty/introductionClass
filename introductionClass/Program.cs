@@ -224,6 +224,14 @@ class Program
         ListCust.Add(c2);
         ListCust.Add(c3);
         Console.WriteLine(ListCust.Contains(c3));
+        Console.WriteLine(ListCust.Exists(cust => cust.name.StartsWith("D")));
+        Customer customer = ListCust.Find(cust => cust.salary > 60000);
+        Console.WriteLine("ID - {0}, Name - {1}, Salary - {2}", customer.id, customer.name, customer.salary);
+        Customer c = ListCust.FindLast(cust => cust.salary > 60000);
+        Console.WriteLine("ID - {0}, Name - {1}, Salary - {2}", c.id, c.name, c.salary);
+        List<Customer> cu = ListCust.FindAll(cust => cust.salary > 60000);
+        foreach(var cl in cu)
+            Console.WriteLine("ID - {0}, Name - {1}, Salary - {2}", cl.id, cl.name, cl.salary);
     }
     
 }
