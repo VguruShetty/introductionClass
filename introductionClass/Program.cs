@@ -196,51 +196,51 @@
 
 #region List
 
-class Program
-{
-    public static void Main()
-    {
-        Customer c1 = new Customer
-        {
-            id = 1,
-            name = "Raksha",
-            salary = 100000
-        };
-        Customer c2 = new Customer
-        {
-            id = 2,
-            name = "vguru",
-            salary = 120000
-        };
-        Customer c3 = new Customer
-        {
-            id = 3,
-            name = "Divya",
-            salary = 50000
-        };
+//class Program
+//{
+//    public static void Main()
+//    {
+//        Customer c1 = new Customer
+//        {
+//            id = 1,
+//            name = "Raksha",
+//            salary = 100000
+//        };
+//        Customer c2 = new Customer
+//        {
+//            id = 2,
+//            name = "vguru",
+//            salary = 120000
+//        };
+//        Customer c3 = new Customer
+//        {
+//            id = 3,
+//            name = "Divya",
+//            salary = 50000
+//        };
 
-        List<Customer> ListCust = new List<Customer>();
-        ListCust.Add(c1);
-        ListCust.Add(c2);
-        ListCust.Add(c3);
-        Console.WriteLine(ListCust.Contains(c3));
-        Console.WriteLine(ListCust.Exists(cust => cust.name.StartsWith("D")));
-        Customer customer = ListCust.Find(cust => cust.salary > 60000);
-        Console.WriteLine("ID - {0}, Name - {1}, Salary - {2}", customer.id, customer.name, customer.salary);
-        Customer c = ListCust.FindLast(cust => cust.salary > 60000);
-        Console.WriteLine("ID - {0}, Name - {1}, Salary - {2}", c.id, c.name, c.salary);
-        List<Customer> cu = ListCust.FindAll(cust => cust.salary > 60000);
-        foreach(var cl in cu)
-            Console.WriteLine("ID - {0}, Name - {1}, Salary - {2}", cl.id, cl.name, cl.salary);
-    }
+//        List<Customer> ListCust = new List<Customer>();
+//        ListCust.Add(c1);
+//        ListCust.Add(c2);
+//        ListCust.Add(c3);
+//        Console.WriteLine(ListCust.Contains(c3));
+//        Console.WriteLine(ListCust.Exists(cust => cust.name.StartsWith("D")));
+//        Customer customer = ListCust.Find(cust => cust.salary > 60000);
+//        Console.WriteLine("ID - {0}, Name - {1}, Salary - {2}", customer.id, customer.name, customer.salary);
+//        Customer c = ListCust.FindLast(cust => cust.salary > 60000);
+//        Console.WriteLine("ID - {0}, Name - {1}, Salary - {2}", c.id, c.name, c.salary);
+//        List<Customer> cu = ListCust.FindAll(cust => cust.salary > 60000);
+//        foreach(var cl in cu)
+//            Console.WriteLine("ID - {0}, Name - {1}, Salary - {2}", cl.id, cl.name, cl.salary);
+//    }
     
-}
+//}
 
-public class Customer
-{
-    public int id { get; set; }
-    public string name { get; set; }
+//public class Customer
+//{
+//    public int id { get; set; }
+//    public string name { get; set; }
 
-    public int salary { get; set; }
-}
+//    public int salary { get; set; }
+//}
 #endregion
