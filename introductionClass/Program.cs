@@ -246,5 +246,49 @@
 #endregion
 
 #region Queue
+class Prgogram
+{
+    public static void Main()
+    {
+        Customer c1 = new Customer
+        {
+            Id = 1,
+            Name = "ayan",
+            Gender = "Male"
+        };
+        Customer c2 = new Customer
+        {
+            Id = 2,
+            Name = "Sayan",
+            Gender = "Male"
+        };
+        Customer c3 = new Customer
+        {
+            Id = 3,
+            Name = "aliya",
+            Gender = "Female"
+        };
+        Queue<Customer> q = new Queue<Customer>();
+        q.Enqueue(c1);
+        q.Enqueue(c2);
+        q.Enqueue(c3);
 
+        foreach(Customer ql in q)
+        {
+            Console.WriteLine("Queue customer name : " + ql.Name);
+        }
+        q.Dequeue();
+        Console.WriteLine(q.Count);
+        foreach (Customer ql in q)
+        {
+            Console.WriteLine("Queue customer name : " + ql.Name);
+        }
+    }
+}
+public class Customer 
+{ 
+    public int Id { get; set; }
+    public string Name { get; set; }
+    public string Gender { get; set; }
+} 
 #endregion
