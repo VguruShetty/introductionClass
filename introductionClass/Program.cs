@@ -233,7 +233,7 @@
 //        foreach(var cl in cu)
 //            Console.WriteLine("ID - {0}, Name - {1}, Salary - {2}", cl.id, cl.name, cl.salary);
 //    }
-    
+
 //}
 
 //public class Customer
@@ -243,4 +243,8 @@
 
 //    public int salary { get; set; }
 //}
+#endregion
+
+#region Queue
+
 #endregion
