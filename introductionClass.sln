@@ -5,6 +5,8 @@ VisualStudioVersion = 17.12.35707.178
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "introductionClass", "introductionClass\introductionClass.csproj", "{9E5493AF-DDC8-4E2B-9C8B-E752F091F9EF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngularApplication1", "AngularApplication1\AngularApplication1.csproj", "{466E8F04-52F5-4A40-B732-BA6F52AB6E92}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,8 +23,19 @@ Global
 		{9E5493AF-DDC8-4E2B-9C8B-E752F091F9EF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9E5493AF-DDC8-4E2B-9C8B-E752F091F9EF}.Release|x64.ActiveCfg = Release|x64
 		{9E5493AF-DDC8-4E2B-9C8B-E752F091F9EF}.Release|x64.Build.0 = Release|x64
+		{466E8F04-52F5-4A40-B732-BA6F52AB6E92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{466E8F04-52F5-4A40-B732-BA6F52AB6E92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{466E8F04-52F5-4A40-B732-BA6F52AB6E92}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{466E8F04-52F5-4A40-B732-BA6F52AB6E92}.Debug|x64.Build.0 = Debug|Any CPU
+		{466E8F04-52F5-4A40-B732-BA6F52AB6E92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{466E8F04-52F5-4A40-B732-BA6F52AB6E92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{466E8F04-52F5-4A40-B732-BA6F52AB6E92}.Release|x64.ActiveCfg = Release|Any CPU
+		{466E8F04-52F5-4A40-B732-BA6F52AB6E92}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D2F7374A-CC0B-44B2-82CB-B32A75867537}
 	EndGlobalSection
 EndGlobal
