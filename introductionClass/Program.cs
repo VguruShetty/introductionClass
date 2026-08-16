@@ -344,3 +344,17 @@
 
 #endregion
 
+using introductionClass;
+
+class Program
+{
+    public static void Main()
+    {
+        //ClassA Objref = new ClassA();
+        //Objref.Display();
+        //ClassA Objref1 = new ClassA();
+        //Objref1.Display();
+        ClassA.Display();
+        ClassA.a = 12;
+    }
+}
