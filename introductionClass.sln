@@ -5,7 +5,7 @@ VisualStudioVersion = 17.12.35707.178
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "introductionClass", "introductionClass\introductionClass.csproj", "{9E5493AF-DDC8-4E2B-9C8B-E752F091F9EF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication", "WebApplication\WebApplication.csproj", "{4EBEDFA8-134B-49A8-9F5C-20109953CC11}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplicationAPI", "WebApplication\WebApplicationAPI.csproj", "{4EBEDFA8-134B-49A8-9F5C-20109953CC11}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{1CEB12B8-713C-491F-B8F2-BB525B240EA8}"
 EndProject
