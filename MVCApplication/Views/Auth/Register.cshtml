@@ -1,0 +1,27 @@
+﻿<form method="post" class="d-flex align-items-center justify-content-center" style="min-height: 75vh;">
+    <div class="card p-4 shadow" style="width: 100%; max-width: 400px;">
+        <h3 class="text-center mb-4">Register</h3>
+
+        <div class="mb-3">
+            <label for="username" class="form-label">Username</label>
+            <input type="text" name="Username" class="form-control" id="username" placeholder="johndoe" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="email" class="form-label">Email address</label>
+            <input type="email" name="Email" class="form-control" id="email" placeholder="name@example.com" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" name="Password" class="form-control" id="password" placeholder="Create a password" required>
+        </div>
+
+        <button type="submit" class="btn btn-success w-100">Sign Up</button>
+
+        <div class="text-center mt-3">
+            <small class="text-muted">Already have an account? <a asp-controller="Auth" asp-action="Login">Log in</a></small>
+        </div>
+        
+    </div>    
+</form>
