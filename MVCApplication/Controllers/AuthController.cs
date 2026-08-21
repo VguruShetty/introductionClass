@@ -1,12 +1,15 @@
 ﻿using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using MVCApplication.Data;
 using MVCApplication.Dto;
 using MVCApplication.Models;
 
 namespace MVCApplication.Controllers
 {
+    
     public class AuthController(AppDbContext _context) : Controller
     {
         //previous code
@@ -69,6 +72,16 @@ namespace MVCApplication.Controllers
             {
                 if(existingUser.Password == dto.Password)
                 {
+                    var token = GenerateJwtToken(existingUser.Username ?? existingUser.Email, existingUser.Email);
+
+                    Response.Cookies.Append("JwtToken", token, new CookieOptions
+                    {
+                        HttpOnly = true,
+                        Secure = true,
+                        SameSite = SameSiteMode.Strict,
+                        Expires = DateTime.UtcNow.AddMinutes(30)
+                    });
+
                     return RedirectToAction("Index", "Dashboard");
                 }
                 else
@@ -77,6 +90,32 @@ namespace MVCApplication.Controllers
                     return View("Login");
                 }
             }
+        }
+        private string GenerateJwtToken(string username, string email)
+        {
+            var tokenHandler = new System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler();
+            var key = System.Text.Encoding.ASCII.GetBytes("JADBO7CTFlh4Ruiks8ZutW8TFdurPmBg6NdEwIQBvsZ");
+
+            var tokenDescriptor = new SecurityTokenDescriptor
+            {
+                Subject = new System.Security.Claims.ClaimsIdentity(new[]
+                {
+                    new System.Security.Claims.Claim(System.Security.Claims.ClaimTypes.Name, username),
+                    new System.Security.Claims.Claim(System.Security.Claims.ClaimTypes.Email, email)
+                }),
+                Expires = DateTime.UtcNow.AddMinutes(30),
+                SigningCredentials = new SigningCredentials(
+                    new SymmetricSecurityKey(key),
+                    SecurityAlgorithms.HmacSha256Signature)
+                 };
+
+            var token = tokenHandler.CreateToken(tokenDescriptor);
+            return tokenHandler.WriteToken(token);
+        }
+        public IActionResult LogOutUser()
+        {
+            Response.Cookies.Delete("JwtToken");
+            return RedirectToAction("Login");
         }
     }
 }

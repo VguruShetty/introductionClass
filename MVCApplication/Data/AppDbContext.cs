@@ -9,5 +9,6 @@ namespace MVCApplication.Data
         {
         }
         public DbSet<User> Users { get; set; } // created Schema for user class
+        public DbSet<Product> Products { get; set; } // created Schema for product class
     }
 }

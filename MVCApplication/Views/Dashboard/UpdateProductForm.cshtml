@@ -1,0 +1,50 @@
+﻿@using MVCApplication.Dto
+@model ProductDTo
+
+<div class="d-flex align-items-center justify-content-center" style="min-height: 75vh;">
+    <div class="card p-4 shadow-sm border-0" style="width: 100%; max-width: 500px;">
+        <h3 class="fw-bold mb-4 text-center">Update Product</h3>
+
+        <form method="post" asp-controller="Dashboard" asp-action="UpdateProduct">
+            @if (ViewBag.SuccessMessage != null)
+            {
+                <div class="alert alert-success py-2 text-center" role="alert">
+                    @ViewBag.SuccessMessage
+                </div>
+            }
+            @if (ViewBag.ErrorMessage != null)
+            {
+                <div class="alert alert-danger py-2 text-center" role="alert">
+                    @ViewBag.ErrorMessage
+                </div>
+            }
+            <input type="hidden" asp-for="Id" placeholder="id"/>
+            <div class="mb-3">
+                <label for="ProductName" class="form-label">Product Name</label>
+                <input asp-for="ProductName" class="form-control" placeholder="e.g. Wireless Mouse" required />
+            </div>
+
+            <div class="mb-3">
+                <label for="ProductDescription" class="form-label">Description</label>
+                <textarea asp-for="ProductDescription" class="form-control" rows="3" placeholder="Enter product description..." required></textarea>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="ProductColor" class="form-label">Color</label>
+                    <input asp-for="ProductColor" class="form-control" placeholder="e.g. Matte Black" required />
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <label for="Price" class="form-label">Price ($)</label>
+                    <input asp-for="Price" type="number" step="0.01" min="0" class="form-control" placeholder="0.00" required />
+                </div>
+            </div>
+
+            <div class="d-flex gap-2 mt-3">
+                <a asp-action="Index" class="btn btn-secondary w-50">Cancel</a>
+                <button type="submit" class="btn btn-primary w-50">Save Product</button>
+            </div>
+        </form>
+    </div>
+</div>
