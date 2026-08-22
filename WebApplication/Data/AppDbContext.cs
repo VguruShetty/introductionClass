@@ -1,10 +1,17 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using WebApplicationAPI.Model;
+using Microsoft.Extensions.Options;
+using WebApplicationAPI.Entities;
 
 namespace WebApplicationAPI.Data
 {
-    public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(options)
+    public class AppDbContext : DbContext
     {
-        public DbSet<User> Users { get; set; } // created Schema for user class
+        public AppDbContext(DbContextOptions<AppDbContext> options)
+            : base(options)
+        {
+            
+        }
+        public DbSet<User> AccountUsers { get; set; }
+        public DbSet<Employee> Employees { get; set; }
     }
 }
