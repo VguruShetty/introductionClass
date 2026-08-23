@@ -1,10 +1,7 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace WebApplicationAPI.Entities
+﻿namespace WebApplicationAPI.DTo
 {
-    public class Employee
+    public class EmployeeDto
     {
-        [Key]
         public Guid Id { get; set; }
         public string? Name { get; set; }
         public string? Email { get; set; }
@@ -13,6 +10,5 @@ namespace WebApplicationAPI.Entities
         public DateTime? LastModifiedDate { get; set; }
         public string? Position { get; set; }
         public string? Department { get; set; }
-
     }
 }
