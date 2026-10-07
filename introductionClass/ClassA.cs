@@ -14,6 +14,7 @@ namespace introductionClass
             //Console.WriteLine("Hello World, Number is {0}", a);
             //Console.WriteLine(a.GetType());
             Console.WriteLine("This method is static method");
+            Console.WriteLine("hello");
         }
     }
 }
