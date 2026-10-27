@@ -6,7 +6,7 @@ using WebApplicationAPI.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-//JWT Authentication configuration
+//JWT Authentication configuration comment 
 builder.Services.AddAuthentication(options =>
 {
     options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
