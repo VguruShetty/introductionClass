@@ -356,6 +356,7 @@ class Program
         //Objref1.Display();
         ClassA.Display();
         ClassA.a = 12;
+        ClassA.a = 10;
         Console.WriteLine("Value of a is : " + ClassA.a);
     }
 }
