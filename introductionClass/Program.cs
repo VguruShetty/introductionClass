@@ -154,7 +154,7 @@
 //                result += i;
 //            }
 //        }
-//        Console.WriteLine(result);
+//        Console.WriteLine(result);//comm
 //    } 
 //}
 #endregion
